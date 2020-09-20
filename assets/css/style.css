@@ -1,0 +1,195 @@
+body {
+  position: relative;
+}
+.site-header {
+  background: #000;
+}
+
+.alert{
+  background-color: white;
+}
+.site-header.affix {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba( 0, 0, 0, .90 );
+}
+.navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: auto;
+  border: none;
+}
+.navbar-default {
+  border-bottom-color: #D2D6DF;
+  background: none;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #3a3a3a;
+}
+.navbar-brand {
+  height: auto;
+  width: 200px;
+}
+.media-fluid {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.site-search .form-group {
+  display: block;
+}
+
+@media ( min-width: 768px ) {
+  .navbar-brand {
+    width: auto;
+  }
+  .site-search {
+    margin-top: 50px;
+    width: 400px;
+  }
+}
+
+@media ( min-width: 1200px ) {
+  .site-search {
+    margin-left: 50px;
+  }
+}
+
+.site-search input[type="text"],
+.site-search button[type="submit"] {
+  float: left;
+}
+.site-search input[type="text"] {
+  width: 100%;
+  padding-right: 30%;
+  background: #3a3a3a;
+  border-color: #333131;
+}
+.site-search input[type="text"]:focus {
+  color: #fff;
+}
+.site-search button[type="submit"] {
+  color: #fff;
+  font-weight: bold;
+  width: 30%;
+  margin-left: -30%;
+  text-transform: uppercase;
+  border-color: #333131;
+  background-color: #64009e;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.site-search button[type="submit"]:hover,
+.site-search button[type="submit"]:focus {
+  border-color: #25075E;
+  background-color: #530084;
+}
+
+/*------------------------------------*\
+  #Bandsintown
+\*------------------------------------*/
+
+#bandsintown {
+	
+	padding-top: 60px;
+	padding-bottom: 60px;;
+}
+.artist-bio {
+	color:#fff;
+}
+.event-table {
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
+#bandsintown .page-header{
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  margin: 10px 0 20px;
+  border-bottom: solid 5px #fff;
+}
+
+#bandsintown .page-header h1 {
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* The overlay effect with black background */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+}
+
+/* The content */
+.overlay-content {
+  
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+
+
+
+
+/* Style the search field */
+.overlay input[type=text] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.facebook_page_url{
+  background-color: white;
+}
+
+.overlay input[type=text]:hover {
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+.overlay button {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay button:hover {
+  background: #bbb;
+}
+
+
+
+
+
+
+

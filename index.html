@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      
+    <title>FUNkaariyaan</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+<!-- Bootstrap CSS -->
+    
+    <!-- build:css css/main.css -->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+    <!-- endbuild -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" type="text/javascript" ></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" type="text/javascript" ></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js" type="text/javascript" ></script>
+
+    <script src="assets/js/bandsintown.js" type="text/javascript"></script>
+    
+    
+
+
+
+
+    <script>
+      $(document).ready(function() {
+  
+        $("#bandsintown").hide();
+        // when the search button executed, run searchBandsInTown function, show most of the div and hide some div
+        $("#searchButton").on("click", function(event) {
+          event.preventDefault();
+          $("#bandsintown").show();
+  
+          
+          var artistInput = $("#search").val().trim();
+          
+          
+          $("#search").val("");
+          
+          searchBandsInTown(artistInput);
+
+  
+          
+        });
+      });
+      </script>
+
+</head>
+<style>
+    body {
+      text-align: center;  
+      background-image: url('1.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+      background-color:black;
+    }
+    </style>
+<body>
+    <br><br><br><br>
+<div class="container">
+    <div class="row row-header">
+     <h1>Hello, Fellow Aesthete!</h1>
+     </div>
+     <br><br><br><br>
+</div>
+     
+     <div id="myOverlay" class="overlay container">
+   <div class="overlay-content">
+   <form >
+     <input type="text" placeholder="Looking for an arist?" id="search" ></input>
+     <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+     </form>
+ </div>
+</div>
+    
+<div id="bandsintown">
+  <div class="container">
+    <div class="js-no-artist alert "><h1 class="text-center h3">Sorry, the artist you are looking for is not found</h1></div><!-- /.js-no-artist -->
+
+    <div class="row js-artist-info">
+      <div class="col-sm-3">
+        <div class="artist-profile">
+          <div class="page-header">
+            <h1 class="js-artist-name text-uppercase"></h1>
+          </div><!-- /.page-header -->
+          <p><img class="js-artist-image img-responsive img-thumbnail" src=""></p>
+          <p><a class="js-read-more text-uppercase facebook_page_url" href="#">Artist Facebook Page</a></p>
+        </div><!-- /.artist-profile -->
+      </div><!-- /.col -->
+
+      <div class="col-sm-9">
+        <div class="page-header">
+          <h1 class="text-uppercase">Upcoming Events</h1>
+        </div><!-- /.page-header -->
+
+        <div class="js-no-events alert "><h3 class="text-center">Sorry, this artist doesn't have any upcoming events</h3></div><!-- /.js-no-artist -->
+
+        <div class="table-responsive">
+          <table class="table table-striped event-table js-event-table">
+            <thead>
+              <tr>
+                
+                <th class="th">Date:</th>
+                <th class="th">Venue:</th>
+                <th class="th">Location:</th>
+                
+              </tr>
+            </thead>
+            <tbody class="event"></tbody>
+          </table>
+        </div><!-- /.table-responsive -->
+
+      </div><!-- /.col -->
+    </div><!-- /.js-artist-info -->
+
+    <div class="js-artist-bio artist-bio"></div><!-- /.artist-bio -->
+
+  </div><!-- /.container -->
+</div><!-- /#bandsintown -->
+  </body>
+  
+</html>
